@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="minhaVar"
+            type="com.example.rlindoso.rlindosotreinamento.model.AppTreinamento"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar" />
+
+
+        <LinearLayout
+            android:id="@+id/activity_app_treinamento_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.rlindoso.rlindosotreinamento.view.AppTreinamentoDetailActivity">
+
+            <TextView
+                style="@style/caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome" />
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{minhaVar.nome}" />
+
+            <TextView
+                style="@style/caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Aula" />
+
+            <TextView
+                android:id="@+id/txtAula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(minhaVar.aula)}" />
+
+            <TextView
+                style="@style/caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Objetivo" />
+
+            <TextView
+                android:id="@+id/txtObjetivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{minhaVar.objetivo}" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@{minhaVar.imageUrl}"
+                android:id="@+id/imageView"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

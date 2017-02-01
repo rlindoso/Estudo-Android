@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">rlindoso treinamento</string>
+    <string name="numero_aula">Aula %1$d</string>
+    <string name="name_exemplo_1">Alcool ou Gasolina</string>
+    <string name="objetivo_exemplo_1">Calcular se é melhor abastacer com alcool ou gasolina</string>
+    <string name="descMain">Escolha o APP</string>
+    <string name="btnStartApp">Iniciar App</string>
+    <string name="txtGas">Valor Gasolina: </string>
+    <string name="txtAlc">Valor Alcool: </string>
+    <string name="selecione_app">Selecione um app</string>
+    <string name="btnCalc">Calcular</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="salvar">Salvar</string>
+    <string name="objetivo">Objetivo</string>
+    <string name="aula">Numetro da Aula</string>
+    <string name="nome_aula">Nome da Aula</string>
+    <string name="copiar">Copiar</string>
+    <string name="colar">Colar</string>
+</resources>
