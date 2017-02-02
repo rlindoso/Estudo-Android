@@ -5,30 +5,29 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.rlindoso.rlindosotreinamento.metadata.AutorMetadata;
-import com.example.rlindoso.rlindosotreinamento.model.Autor;
+import com.example.rlindoso.rlindosotreinamento.metadata.LivroMetadata;
+import com.example.rlindoso.rlindosotreinamento.model.Livro;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by rlindoso on 01/02/2017.
+ * Created by rlindoso on 02/02/2017.
  */
 
-public class AutorRepository {
+public class LivroRepository {
+    private static final String TAG = AppTreinamentoRepository.class.getSimpleName();
     private SqliteHelper helper;
-    private static final String TAG = AutorRepository.class.getSimpleName();
 
-    public AutorRepository(Context context) {
+    public LivroRepository(Context context) {
         helper = new SqliteHelper(context);
     }
-
-    public void insert(Autor autor) {
+    public void insert(Livro livro) {
         SQLiteDatabase db = helper.getWritableDatabase();
         db.beginTransaction();
 
         try {
-            db.insert(AutorMetadata.TABLE_NAME, null, AutorMetadata.toContentValues(autor));
+            db.insert(LivroMetadata.TABLE_NAME, null, LivroMetadata.toContentValues(livro));
             db.setTransactionSuccessful();
         } catch (Exception e) {
             Log.e(TAG, "insert: ", e);
@@ -37,15 +36,15 @@ public class AutorRepository {
         }
     }
 
-    public void update(Autor autor) {
-        String where = String.format("%s = ?", AutorMetadata.ID);
-        String[] args = new String[]{String.valueOf(autor.getId())};
+    public void update(Livro livro) {
+        String where = String.format("%s = ?", LivroMetadata.ID);
+        String[] args = new String[]{String.valueOf(livro.getId())};
 
         SQLiteDatabase db = helper.getWritableDatabase();
         db.beginTransaction();
 
         try {
-            db.update(AutorMetadata.TABLE_NAME, AutorMetadata.toContentValues(autor), where, args);
+            db.update(LivroMetadata.TABLE_NAME, LivroMetadata.toContentValues(livro), where, args);
             db.setTransactionSuccessful();
         } catch (Exception e) {
             Log.e(TAG, "update: ", e);
@@ -54,15 +53,15 @@ public class AutorRepository {
         }
     }
 
-    public List<Autor> getAll() {
-        List<Autor> result = new ArrayList<>();
+    public List<Livro> getAll() {
+        List<Livro> result = new ArrayList<>();
         SQLiteDatabase db = helper.getWritableDatabase();
 
-        Cursor cursor = db.query(AutorMetadata.TABLE_NAME, null, null, null, null, null, AutorMetadata.NOME);
+        Cursor cursor = db.query(LivroMetadata.TABLE_NAME, null, null, null, null, null, LivroMetadata.TITULO);
         try {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                result.add(AutorMetadata.fromCursor(cursor));
+                result.add(LivroMetadata.fromCursor(cursor));
                 cursor.moveToNext();
             }
         } catch (Exception e) {
@@ -74,28 +73,15 @@ public class AutorRepository {
         return result;
     }
 
-    public Autor getAutor(int id) {
-        SQLiteDatabase db = helper.getWritableDatabase();
-
-        String where = String.format("%s = ?", AutorMetadata.ID);
-        String[] args = new String[]{String.valueOf(id)};
-
-        Cursor cursor = db.query(AutorMetadata.TABLE_NAME, null, where, args, null, null, AutorMetadata.NOME);
-
-        Autor autor = AutorMetadata.fromCursor(cursor);
-
-        return autor;
-    }
-
     public void delete(int id) {
-        String where = String.format("%s = ?", AutorMetadata.ID);
+        String where = String.format("%s = ?", LivroMetadata.ID);
         String[] args = new String[]{String.valueOf(id)};
 
         SQLiteDatabase db = helper.getWritableDatabase();
         db.beginTransaction();
 
         try {
-            db.delete(AutorMetadata.TABLE_NAME, where, args);
+            db.delete(LivroMetadata.TABLE_NAME, where, args);
             db.setTransactionSuccessful();
         } catch (Exception e) {
             Log.e(TAG, "delete: ", e);
@@ -103,4 +89,5 @@ public class AutorRepository {
             db.endTransaction();
         }
     }
+
 }

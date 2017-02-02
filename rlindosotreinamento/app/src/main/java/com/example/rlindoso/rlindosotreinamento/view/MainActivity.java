@@ -29,6 +29,7 @@ public class MainActivity extends BaseActivity {
         lista.add(new AppTreinamento("Gasolina ou Alcool", 1, "Abastecer com gasolina ou alcool"));
         lista.add(new AppTreinamento("Lista", 2, "Listar alguma coisa"));
         lista.add(new AppTreinamento("Cadastro Básico", 3, "Listar, detalhar, editar, excluir e add"));
+        lista.add(new AppTreinamento("Biblioteca", 4, "Cadastrar Autores e Livros"));
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
@@ -52,6 +53,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 3:
                         startActivity(new Intent(MainActivity.this, CadBasicoActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, BibliotecaActivity.class));
                         break;
                     default:
                         Toast.makeText(MainActivity.this, R.string.selecione_app, Toast.LENGTH_SHORT).show();

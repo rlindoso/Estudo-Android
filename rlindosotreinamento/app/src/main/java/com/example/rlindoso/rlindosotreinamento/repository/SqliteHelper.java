@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.rlindoso.rlindosotreinamento.metadata.AppTreinamentoMetadata;
 import com.example.rlindoso.rlindosotreinamento.metadata.AutorMetadata;
+import com.example.rlindoso.rlindosotreinamento.metadata.LivroMetadata;
 
 /**
  * Created by rlindoso on 01/02/2017.
@@ -14,7 +15,7 @@ import com.example.rlindoso.rlindosotreinamento.metadata.AutorMetadata;
 public class SqliteHelper extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "treinamento.db";
-    private static final int VERSAO_DB = 1;
+    private static final int VERSAO_DB = 3;
 
     public SqliteHelper(Context context) {
         super(context, NOME_BANCO, null, VERSAO_DB);
@@ -24,10 +25,12 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(AppTreinamentoMetadata.SQL_CREATE);
         db.execSQL(AutorMetadata.SQL_CREATE);
+        db.execSQL(LivroMetadata.SQL_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL(AutorMetadata.SQL_CREATE);
+        db.execSQL(LivroMetadata.SQL_CREATE);
     }
 }

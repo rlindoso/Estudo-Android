@@ -3,30 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.0_51cefc2f276adbc01a91ccc6e6d7710ae91c4079.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.0_a9729b11627ea6664305907f2e6c0e821bb87d13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.0_6365645e136edab228beed9f1c6835edae6a71c0.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.0_4d3343d104012284185980f63b5a0fdb6c929508.jar" />
     </item>
     <item
         is-multidex="false"
@@ -35,34 +17,16 @@
         optimize="true"
         revision="25.0.2"
         sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_b16711639a356ec16704aa736d937315d2905b73.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_b16711639a356ec16704aa736d937315d2905b73.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.databinding-adapters-1.2.1_e1ead0f902a6f0262a6304c317d204a8ad613b83.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.0_c033931c121fa5da15b135737c07945e058d9a21.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.0_b4a90e7798fed378be98a9b4220fa64c3f83506a.jar" />
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.0_8be17d8d4dae5516c53d0b327a06d844d0a9aee2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -71,34 +35,43 @@
         optimize="true"
         revision="25.0.2"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_c787ec8982acdf86d1fab3a2dc73e53447c5927f.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_c787ec8982acdf86d1fab3a2dc73e53447c5927f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.0_d23b22af999aae7d4d13fc3b94125274380ea29c.jar" />
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.0_3eb60d899f3098cf6a13ad087ad2005fdd41bb21.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.0_3ee5f7e6a6b93652b9c96a0b9ea11a9a00ab7b36.jar" />
+        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.databinding-library-1.2.1_8ad97393ed7c53cdf77cb55f6a35f9c54525c0f0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.0_53e4386355b83f4f6cc308fd330f4ce47e646b61.jar" />
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.0_f35d812c344c2bca773b8721c245fe157dc24d2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.0_9ce8f8d2e02e5e5512747b1194d8a1e56ca4e53b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -107,52 +80,88 @@
         optimize="true"
         revision="25.0.2"
         sha1="b4b51d1925cdfda98fd861230c1ecb5855500129">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\baseLibrary-2.2.3_8bc637fcca1e0a3556ffc9576dbd2dded58abbcb.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\baseLibrary-2.2.3_8bc637fcca1e0a3556ffc9576dbd2dded58abbcb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.0_f486de2449550d2aac8211336d7865847ad8470d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.0_21b632d69e9f693721b53fa36479ac41b70910c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.0_6f452d9bcdfb8015ab48dda96b64d9642e7d12e8.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.0_e81e1bc69c5df1be9f042a3d331879a9538a786e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.0_f38354af465c235b1da4f74e1876b33a303d26ac.jar" />
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.0_0287c4826d48e956e23e48facc020f2874cdc25a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.0_c09d7354c0cfd44697ffeea7aed8194f7e504d04.jar" />
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.0_bb902e53d71a2d72737967a575a431c5ffde7691.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.0_fa791b9b6d7d4951888b54fce2bc2575db64f8ce.jar" />
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.0_b05f910c7069fa01e1f25ecf074bafc9f75449a6.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
+        jar="C:\Users\rlindoso\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.3\56498efd17752898cfcc3868c1b6211a07b12b8f\joda-time-2.3.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
-        <dex dex="D:\projects\Estudo-Android\Estudo-Android.git\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.databinding-library-1.2.1_4b3945e501e8f1b63e60fac9ad104ad68de6ade6.jar" />
+        sha1="56498efd17752898cfcc3868c1b6211a07b12b8f">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\joda-time-2.3_bbc0c2eeef45266d0d7a4973c14d38d975b7e828.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.0_7ede1532c6fcd169d1f544242c73d04d1751f434.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
+        <dex dex="D:\projects\Estudo-Android\trunk\rlindosotreinamento\app\build\intermediates\pre-dexed\debug\com.android.databinding-adapters-1.2.1_9d6b18c8b2e2088aeaed14cc8ad7cacdf539cbf1.jar" />
     </item>
 
 </items>

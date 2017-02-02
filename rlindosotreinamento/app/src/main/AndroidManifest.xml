@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.CalcActivity" />
+        <activity android:name=".view.BibliotecaAutorEditAddActivity" />
         <activity android:name=".view.MainAlcGasActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
@@ -24,7 +25,13 @@
             android:name=".view.AppTreinamentoDetailActivity"
             android:label="Detalhes" />
         <activity android:name=".view.CadBasicoActivity" />
-        <activity android:name=".view.CadBasicoEditAddActivity"></activity>
+        <activity android:name=".view.CadBasicoEditAddActivity" />
+        <activity android:name=".view.BibliotecaActivity" />
+        <activity android:name=".view.BibliotecaAutorActivity" />
+        <activity
+            android:name=".view.BibliotecaLivroActivity"
+            android:label="@string/title_activity_biblioteca_livro"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

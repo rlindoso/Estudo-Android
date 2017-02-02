@@ -17,4 +17,8 @@
     <string name="nome_aula">Nome da Aula</string>
     <string name="copiar">Copiar</string>
     <string name="colar">Colar</string>
+    <string name="title_activity_biblioteca_livro">BibliotecaLivroActivity</string>
+    <string name="autor">Autor</string>
+    <string name="nome_autor">Nome do Autor</string>
+    <string name="data_nasc">Data de Nascimento</string>
 </resources>

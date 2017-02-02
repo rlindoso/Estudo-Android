@@ -2,13 +2,16 @@ package com.example.rlindoso.rlindosotreinamento.model;
 
 import org.joda.time.DateTime;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by rlindoso on 01/02/2017.
  */
 
-public class Autor {
+public class Autor implements Serializable {
+    public static final String EXTRA = "Autor";
+    public static final String EXTRA_COPY = "CopiarAutor";
     private int id;
     private String nome;
     private DateTime dataNascimento;
