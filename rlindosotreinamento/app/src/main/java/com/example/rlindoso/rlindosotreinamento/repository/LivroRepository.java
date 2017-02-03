@@ -53,7 +53,7 @@ public class LivroRepository {
         }
     }
 
-    public List<Livro> getAll() {
+    public List<Livro> getAll(Context context) {
         List<Livro> result = new ArrayList<>();
         SQLiteDatabase db = helper.getWritableDatabase();
 
@@ -61,7 +61,7 @@ public class LivroRepository {
         try {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                result.add(LivroMetadata.fromCursor(cursor));
+                result.add(LivroMetadata.fromCursor(cursor, context));
                 cursor.moveToNext();
             }
         } catch (Exception e) {

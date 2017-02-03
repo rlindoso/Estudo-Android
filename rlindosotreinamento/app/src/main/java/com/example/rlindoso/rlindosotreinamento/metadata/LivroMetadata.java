@@ -1,6 +1,7 @@
 package com.example.rlindoso.rlindosotreinamento.metadata;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.provider.BaseColumns;
 
@@ -20,10 +21,10 @@ public class LivroMetadata {
     public static final String SINOPSE = "sinopse";
 
     public static final String SQL_CREATE = String.format("CREATE TABLE %s(\n" +
-                    "    %s inteGER PRIMARY KEY AUTOINCREMENT,\n" +
-                    "    %s tEXT(30),\n" +
-                    "    %s text(100),\n" +
-                    "    %s inteGER REFERENCES autor([_id]));",
+                    "    %s INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                    "    %s TEXT(30),\n" +
+                    "    %s TEXT(100),\n" +
+                    "    %s INTEGER REFERENCES autor([_id]));",
             TABLE_NAME,
             ID,
             TITULO,
@@ -39,13 +40,13 @@ public class LivroMetadata {
         return cv;
     }
 
-    public static Livro fromCursor(Cursor cursor) {
+    public static Livro fromCursor(Cursor cursor, Context context) {
         int id = getIntValue(cursor, ID);
         String titulo = cursor.getString(cursor.getColumnIndex(TITULO));
         String sinopse = cursor.getString(cursor.getColumnIndex(SINOPSE));
         int idAutor = getIntValue(cursor, ID_AUTOR);
 
-        AutorRepository repo = new AutorRepository(null);
+        AutorRepository repo = new AutorRepository(context);
         Autor autor = repo.getAutor(idAutor);
 
         Livro livro = new Livro(id, sinopse, titulo, autor);

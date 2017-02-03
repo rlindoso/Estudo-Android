@@ -12,11 +12,20 @@ public class DateUtils {
     public static final String DATE_FORMAT = "YYYY-MM-DD";
 
     public static DateTime strToDate(String strDate) {
-        DateTimeFormatter format = DateTimeFormat.forPattern(DATE_FORMAT);
-        return format.parseDateTime(strDate);
+        try{
+            DateTimeFormatter format = DateTimeFormat.forPattern(DATE_FORMAT);
+            return format.parseDateTime(strDate);
+        } catch  (Exception e) {
+            return DateTime.now();
+        }
     }
 
     public static String dateToStr(DateTime date) {
-        return date.toString(DATE_FORMAT);
+        try {
+            return date.toString(DATE_FORMAT);
+        } catch  (Exception e) {
+            return "1989-01-01";
+        }
+
     }
 }

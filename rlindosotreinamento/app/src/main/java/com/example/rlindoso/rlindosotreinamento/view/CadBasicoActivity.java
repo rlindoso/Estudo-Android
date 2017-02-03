@@ -25,13 +25,11 @@ public class CadBasicoActivity extends BaseActivity {
     TextView edtPesquisa;
     AppTreinamentoAdapter adapter;
     AppTreinamento copiarApp;
-
     AppTreinamentoRepository repo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         repo = new AppTreinamentoRepository(this);
 
         final ListView listView = (ListView) findViewById(R.id.lista);

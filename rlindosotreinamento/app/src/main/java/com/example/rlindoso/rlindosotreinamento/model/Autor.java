@@ -14,12 +14,16 @@ public class Autor implements Serializable {
     public static final String EXTRA_COPY = "CopiarAutor";
     private int id;
     private String nome;
-    private DateTime dataNascimento;
+    private String dataNascimento;
 
-    public Autor(int id, String nome, DateTime dataNascimento) {
+    public Autor(int id, String nome, String dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
+    }
+
+    public Autor(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -38,11 +42,11 @@ public class Autor implements Serializable {
         this.nome = nome;
     }
 
-    public DateTime getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(DateTime dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

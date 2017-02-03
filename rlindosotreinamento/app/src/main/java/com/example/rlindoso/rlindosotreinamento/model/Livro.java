@@ -7,6 +7,8 @@ import java.io.Serializable;
  */
 
 public class Livro implements Serializable {
+    public static final String EXTRA = "livro";
+    public static final String EXTRA_COPY = "livroCopy";
     private int id;
     private String sinopse;
     private String titulo;
@@ -17,6 +19,10 @@ public class Livro implements Serializable {
         this.sinopse = sinopse;
         this.titulo = titulo;
         this.autor = autor;
+    }
+
+    public Livro(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -43,10 +49,6 @@ public class Livro implements Serializable {
         this.titulo = titulo;
     }
 
-    public Autor getAutor() {
-        return autor;
-    }
-
     public boolean equals(Object obj) {
         if ((obj != null) && (obj instanceof Livro)) {
             Livro objRef = (Livro) obj;
@@ -56,4 +58,11 @@ public class Livro implements Serializable {
         return false;
     }
 
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 }

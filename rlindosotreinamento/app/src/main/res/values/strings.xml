@@ -21,4 +21,6 @@
     <string name="autor">Autor</string>
     <string name="nome_autor">Nome do Autor</string>
     <string name="data_nasc">Data de Nascimento</string>
+    <string name="titulo_livro">Título do Livro</string>
+    <string name="sinopse">Sinopse</string>
 </resources>

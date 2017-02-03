@@ -82,6 +82,7 @@ public class AutorRepository {
 
         Cursor cursor = db.query(AutorMetadata.TABLE_NAME, null, where, args, null, null, AutorMetadata.NOME);
 
+        cursor.moveToFirst();
         Autor autor = AutorMetadata.fromCursor(cursor);
 
         return autor;

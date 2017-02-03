@@ -16,6 +16,7 @@ import com.example.rlindoso.rlindosotreinamento.R;
 import com.example.rlindoso.rlindosotreinamento.adapter.LivroAdapter;
 import com.example.rlindoso.rlindosotreinamento.model.Livro;
 import com.example.rlindoso.rlindosotreinamento.repository.LivroRepository;
+import com.example.rlindoso.rlindosotreinamento.utils.Constants;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class BibliotecaActivity extends BaseActivity {
     TextView edtPesquisa;
     LivroRepository repo;
     LivroAdapter adapter;
+    Livro copiarLivro;
 
 
     @Override
@@ -51,7 +53,8 @@ public class BibliotecaActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(BibliotecaActivity.this, BibliotecaLivroActivity.class));
+                Livro livro = new Livro(-1);
+                openEditActivity(livro);
             }
         });
 
@@ -90,7 +93,64 @@ public class BibliotecaActivity extends BaseActivity {
     }
 
     private void refreshList() {
-        List<Livro> livros = repo.getAll();
+        List<Livro> livros = repo.getAll(this);
         adapter.setItems(livros);
     }
+
+    private void salvar(Livro livro) {
+
+        if (livro.getId() > 0) {
+            repo.update(livro);
+        } else {
+            repo.insert(livro);
+            edtPesquisa.setText("");
+        }
+
+        refreshList();
+    }
+
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        Livro livro = adapter.getItem(info.position);
+
+        switch (item.getItemId()) {
+            case R.id.mnuEditar:
+                openEditActivity(livro);
+                break;
+            case R.id.mnuCopiar:
+                copiarLivro = adapter.getItem(info.position);
+                break;
+            case R.id.mnuExcluir:
+                if (livro != null) {
+                    repo.delete(livro.getId());
+                    refreshList();
+                }
+                break;
+            default:
+
+        }
+
+        return super.onContextItemSelected(item);
+    }
+
+    private void openEditActivity(Livro livro) {
+        Intent intent = new Intent(BibliotecaActivity.this, BibliotecaLivroActivity.class);
+        intent.putExtra(Livro.EXTRA, livro);
+        intent.putExtra(Livro.EXTRA_COPY, copiarLivro);
+
+        startActivityForResult(intent, Constants.REQUEST_CAD_LIVRO);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            if (requestCode == Constants.REQUEST_CAD_LIVRO) {
+                Livro livro = (Livro) data.getSerializableExtra(Livro.EXTRA);
+                salvar(livro);
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }

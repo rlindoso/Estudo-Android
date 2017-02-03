@@ -26,6 +26,10 @@ public class LivroAdapter extends ArrayAdapter<Livro> {
         super(context, android.R.layout.simple_list_item_1);
     }
 
+    public int getCount() {
+        return livros != null ? livros.size() : 0;
+    }
+
     @Override
     public long getItemId(int position) {
         return position;
@@ -55,7 +59,7 @@ public class LivroAdapter extends ArrayAdapter<Livro> {
 
             txtNome.setText(livro.getAutor().getNome());
 
-            txtDataNasc.setText(DateUtils.dateToStr(livro.getAutor().getDataNascimento()));
+            txtDataNasc.setText(livro.getAutor().getDataNascimento());
         }
 
         return convertView;
