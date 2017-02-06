@@ -6,31 +6,22 @@ import java.io.Serializable;
  * Created by rlindoso on 02/02/2017.
  */
 
-public class Livro implements Serializable {
+public class Livro extends BaseModel implements Serializable {
     public static final String EXTRA = "livro";
     public static final String EXTRA_COPY = "livroCopy";
-    private int id;
     private String sinopse;
     private String titulo;
     private Autor autor;
 
     public Livro(int id, String sinopse, String titulo, Autor autor) {
-        this.id = id;
+        this(id);
         this.sinopse = sinopse;
         this.titulo = titulo;
         this.autor = autor;
     }
 
     public Livro(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        setId(id);
     }
 
     public String getSinopse() {

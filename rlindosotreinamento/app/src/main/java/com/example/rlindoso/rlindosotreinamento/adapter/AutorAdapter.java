@@ -72,7 +72,7 @@ public class AutorAdapter extends ArrayAdapter<Autor> {
         if (autor != null) {
             txtNome.setText(autor.getNome());
             txtDescData.setText("Data de Nascimento");
-            txtData.setText(autor.getDataNascimento());
+            txtData.setText(DateUtils.dateToStr(autor.getDataNascimento(), DateUtils.DATE_FORMAT_UI));
         }
 
         return convertView;

@@ -6,11 +6,10 @@ import java.io.Serializable;
  * Created by rlindoso on 26/01/2017.
  */
 
-public class AppTreinamento implements Serializable {
+public class AppTreinamento extends BaseModel implements Serializable {
     public static final String EXTRA = "AppTreinamento";
     public static final String EXTRA_COPY = "copiarApp";
 
-    private int id;
     private String nome;
     private int aula;
     private String objetivo;
@@ -20,14 +19,6 @@ public class AppTreinamento implements Serializable {
         this.nome = nome;
         this.aula = aula;
         this.objetivo = objetivo;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getImageUrl() {

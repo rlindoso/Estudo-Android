@@ -14,7 +14,7 @@ import org.joda.time.DateTime;
  * Created by rlindoso on 01/02/2017.
  */
 
-public class AutorMetadata {
+public class AutorMetadata extends BaseMetadata<Autor> {
     public static final String TABLE_NAME = "autor";
     public static final String ID = BaseColumns._ID;
     public static final String NOME = "nome";
@@ -29,30 +29,49 @@ public class AutorMetadata {
             NOME,
             DATA_NASCIMENTO);
 
-    public static ContentValues toContentValues(Autor autor) {
+    private static AutorMetadata instance;
+
+    public static AutorMetadata getInstance() {
+        if (instance == null ) {
+            instance = new AutorMetadata();
+        }
+
+        return instance;
+    }
+
+    @Override
+    public ContentValues toContentValues(Autor autor) {
         ContentValues cv = new ContentValues();
         cv.put(NOME, autor.getNome());
 //        cv.put(DATA_NASCIMENTO, "1989/01/01");
-        cv.put(DATA_NASCIMENTO, autor.getDataNascimento());
+        cv.put(DATA_NASCIMENTO, DateUtils.dateToStr(autor.getDataNascimento(), DateUtils.DATE_FORMAT_BD));
 
         return cv;
     }
 
-    public static Autor fromCursor(Cursor cursor) {
+    @Override
+    public Autor fromCursor(Cursor cursor) {
         int id = getIntValue(cursor, ID);
         String nome = cursor.getString(cursor.getColumnIndex(NOME));
-        String dataNascimento = cursor.getString(cursor.getColumnIndex(DATA_NASCIMENTO));
+        DateTime dataNascimento = DateUtils.strToDate(cursor.getString(cursor.getColumnIndex(DATA_NASCIMENTO)));
 
         Autor autor = new Autor(id, nome, dataNascimento);
 
         return autor;
     }
 
-    private static int getIntValue(Cursor cursor, String column) {
-        try {
-            return cursor.getInt(cursor.getColumnIndex(column));
-        } catch (Exception e) {
-            return 0;
-        }
+    @Override
+    public String getOrderColumn() {
+        return NOME;
+    }
+
+    @Override
+    public String getTableName() {
+        return TABLE_NAME;
+    }
+
+    @Override
+    public Object getColumnId() {
+        return ID;
     }
 }

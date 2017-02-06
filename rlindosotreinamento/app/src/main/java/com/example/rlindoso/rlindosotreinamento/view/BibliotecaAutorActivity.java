@@ -84,12 +84,8 @@ public class BibliotecaAutorActivity extends BaseActivity {
 
     private void salvar(Autor autor) {
 
-        if (autor.getId() > 0) {
-            repo.update(autor);
-        } else {
-            repo.insert(autor);
-            edtPesquisa.setText("");
-        }
+        repo.save(autor);
+        edtPesquisa.setText("");
 
         refreshList();
     }

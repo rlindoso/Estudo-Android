@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by rlindoso on 25/01/2017.
  */
 
-public class combustiveis implements Serializable {
+public class combustiveis extends BaseModel implements Serializable {
     private double ValGas;
     private double ValAlc;
 

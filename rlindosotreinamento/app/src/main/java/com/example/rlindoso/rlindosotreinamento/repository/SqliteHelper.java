@@ -12,12 +12,12 @@ import com.example.rlindoso.rlindosotreinamento.metadata.LivroMetadata;
  * Created by rlindoso on 01/02/2017.
  */
 
-public class SqliteHelper extends SQLiteOpenHelper {
+class SqliteHelper extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "treinamentoLivr.db";
     private static final int VERSAO_DB = 1;
 
-    public SqliteHelper(Context context) {
+    SqliteHelper(Context context) {
         super(context, NOME_BANCO, null, VERSAO_DB);
     }
 

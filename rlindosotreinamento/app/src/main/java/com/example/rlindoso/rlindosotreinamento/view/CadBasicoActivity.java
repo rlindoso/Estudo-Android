@@ -110,12 +110,8 @@ public class CadBasicoActivity extends BaseActivity {
 
     private void salvar(AppTreinamento treinamento) {
 
-        if (treinamento.getId() > 0) {
-            repo.update(treinamento);
-        } else {
-            repo.insert(treinamento);
-            edtPesquisa.setText("");
-        }
+        repo.save(treinamento);
+        edtPesquisa.setText("");
 
         refreshList();
     }

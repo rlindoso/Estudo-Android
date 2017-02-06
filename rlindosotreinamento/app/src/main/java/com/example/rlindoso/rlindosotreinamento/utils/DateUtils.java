@@ -9,22 +9,23 @@ import org.joda.time.format.DateTimeFormatter;
  */
 
 public class DateUtils {
-    public static final String DATE_FORMAT = "YYYY-MM-DD";
+    public static final String DATE_FORMAT_BD = "yyyy-MM-dd";
+    public static final String DATE_FORMAT_UI = "dd/MM/yyyy";
 
     public static DateTime strToDate(String strDate) {
         try{
-            DateTimeFormatter format = DateTimeFormat.forPattern(DATE_FORMAT);
+            DateTimeFormatter format = DateTimeFormat.forPattern(DATE_FORMAT_UI);
             return format.parseDateTime(strDate);
         } catch  (Exception e) {
             return DateTime.now();
         }
     }
 
-    public static String dateToStr(DateTime date) {
+    public static String dateToStr(DateTime date, String format) {
         try {
-            return date.toString(DATE_FORMAT);
+            return date.toString(DATE_FORMAT_UI);
         } catch  (Exception e) {
-            return "1989-01-01";
+            return "1799-02-02";
         }
 
     }

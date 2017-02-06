@@ -93,18 +93,14 @@ public class BibliotecaActivity extends BaseActivity {
     }
 
     private void refreshList() {
-        List<Livro> livros = repo.getAll(this);
+        List<Livro> livros = repo.getAll();
         adapter.setItems(livros);
     }
 
     private void salvar(Livro livro) {
 
-        if (livro.getId() > 0) {
-            repo.update(livro);
-        } else {
-            repo.insert(livro);
-            edtPesquisa.setText("");
-        }
+        repo.save(livro);
+        edtPesquisa.setText("");
 
         refreshList();
     }

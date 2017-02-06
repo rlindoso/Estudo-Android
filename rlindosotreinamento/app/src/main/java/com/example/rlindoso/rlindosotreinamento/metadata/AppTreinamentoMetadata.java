@@ -10,13 +10,15 @@ import com.example.rlindoso.rlindosotreinamento.model.AppTreinamento;
  * Created by rlindoso on 01/02/2017.
  */
 
-public class AppTreinamentoMetadata {
+public class AppTreinamentoMetadata extends BaseMetadata<AppTreinamento> {
     public static final String TABLE_NAME = "app_treinamento";
     public static final String ID = BaseColumns._ID;
     public static final String NOME = "nome";
     private static final String AULA = "aula";
     private static final String OBJETIVO = "objetivo";
     private static final String URL = "url";
+
+    private static AppTreinamentoMetadata instance;
 
     public static final String SQL_CREATE = String.format("CREATE TABLE %s (" +
                     "    %s INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -31,17 +33,16 @@ public class AppTreinamentoMetadata {
             OBJETIVO,
             URL);
 
-    public static ContentValues toContentValues(AppTreinamento treinamento) {
-        ContentValues cv = new ContentValues();
-        cv.put(NOME, treinamento.getNome());
-        cv.put(AULA, treinamento.getAula());
-        cv.put(OBJETIVO, treinamento.getObjetivo());
-        cv.put(URL, treinamento.getImageUrl());
+    public static AppTreinamentoMetadata getInstance() {
+        if (instance == null ) {
+            instance = new AppTreinamentoMetadata();
+        }
 
-        return cv;
+        return instance;
     }
 
-    public static AppTreinamento fromCursor(Cursor cursor) {
+    @Override
+    public AppTreinamento fromCursor(Cursor cursor) {
         int id = getIntValue(cursor, ID);
         String nome = cursor.getString(cursor.getColumnIndex(NOME));
         int aula = cursor.getInt(cursor.getColumnIndex(AULA));
@@ -55,11 +56,29 @@ public class AppTreinamentoMetadata {
         return appTreinamento;
     }
 
-    private static int getIntValue(Cursor cursor, String column) {
-        try {
-            return cursor.getInt(cursor.getColumnIndex(column));
-        } catch (Exception e) {
-            return 0;
-        }
+    @Override
+    public String getOrderColumn() {
+        return NOME;
+    }
+
+    @Override
+    public String getTableName() {
+        return TABLE_NAME;
+    }
+
+    @Override
+    public Object getColumnId() {
+        return ID;
+    }
+
+    @Override
+    public ContentValues toContentValues(AppTreinamento model) {
+        ContentValues cv = new ContentValues();
+        cv.put(NOME, model.getNome());
+        cv.put(AULA, model.getAula());
+        cv.put(OBJETIVO, model.getObjetivo());
+        cv.put(URL, model.getImageUrl());
+
+        return cv;
     }
 }

@@ -59,7 +59,7 @@ public class LivroAdapter extends ArrayAdapter<Livro> {
 
             txtNome.setText(livro.getAutor().getNome());
 
-            txtDataNasc.setText(livro.getAutor().getDataNascimento());
+            txtDataNasc.setText(DateUtils.dateToStr(livro.getAutor().getDataNascimento(), DateUtils.DATE_FORMAT_UI));
         }
 
         return convertView;

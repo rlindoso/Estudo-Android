@@ -75,11 +75,7 @@ public class ListActivity extends BaseActivity {
         } else {
             AppTreinamento app = new AppTreinamento(nome, 1000, "Objetivo teste");
 
-            if (editPosition >= 0) {
-                repo.update(app);
-            } else {
-                repo.insert(app);
-            }
+            repo.save(app);
 
             editPosition = -1;
             edtPesquisa.setText("");
@@ -100,7 +96,7 @@ public class ListActivity extends BaseActivity {
         AppTreinamento appTreinamento = adapter.getItem(info.position);
 
         if (item.getItemId() == R.id.mnuEditar) {
-            repo.update(appTreinamento);
+            repo.save(appTreinamento);
             edtPesquisa.setText(appTreinamento.getNome());
         } else {
             if (appTreinamento != null) {

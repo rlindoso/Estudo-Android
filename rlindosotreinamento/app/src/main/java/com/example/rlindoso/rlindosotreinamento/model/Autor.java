@@ -3,35 +3,25 @@ package com.example.rlindoso.rlindosotreinamento.model;
 import org.joda.time.DateTime;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by rlindoso on 01/02/2017.
  */
 
-public class Autor implements Serializable {
+public class Autor extends BaseModel implements Serializable {
     public static final String EXTRA = "Autor";
     public static final String EXTRA_COPY = "CopiarAutor";
-    private int id;
     private String nome;
-    private String dataNascimento;
+    private DateTime dataNascimento;
 
-    public Autor(int id, String nome, String dataNascimento) {
-        this.id = id;
+    public Autor(int id, String nome, DateTime dataNascimento) {
+        this(id);
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
 
     public Autor(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        setId(id);
     }
 
     public String getNome() {
@@ -42,11 +32,11 @@ public class Autor implements Serializable {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
+    public DateTime getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(DateTime dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
