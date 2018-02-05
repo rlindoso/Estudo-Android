@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Treinamento</string>
+    <string name="title">Hello Android</string>
+    <string name="ola">Olá</string>
+    <string name="digite_um_texto">Digite um texto</string>
+    <string name="exemplo_1">Exemplo 1</string>
+    <string name="exemplo_2">Spinner</string>
+    <string name="spinner_obj">Spinner Object</string>
+    <string name="nome_idade">Nome: %1$s - Idade %2$d</string>
+</resources>
